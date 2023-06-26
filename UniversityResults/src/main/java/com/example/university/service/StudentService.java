@@ -3,12 +3,12 @@ package com.example.university.service;
 public interface StudentService {
 
 	
-	public void createUser();
+	public void addUser(Student studentAdd);
 	
-	public void viewAllUsers();
+	public void viewAllUsers(Student student);
 	
-	public void getUserById();
+	public Student getUserById(String studentId);
 	
-	public void getUserByName();
+	public void getUserByName(Student studentName);
 	
 }
