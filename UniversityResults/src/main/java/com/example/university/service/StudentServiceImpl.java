@@ -6,29 +6,45 @@ import org.springframework.stereotype.Service;
 @Service
 public class StudentServiceImpl implements StudentService {
 
+	
+	@Autowired
+	StudentRepository studentrepo;
+	
+	
+	
 	@Override
-	public void createUser() {
-		// TODO Auto-generated method stub
+	public void addUser(Student studentAdd) {
+		
+		Student student = studentrepo.save(student);
+		
+	}
+	
+
+	@Override
+	public Student getUserById(String studentId) {
+	
+		Optional<Student> student = studentrepo.findById(studentId);
+		
+		return student;
 		
 	}
 
+
 	@Override
-	public void viewAllUsers() {
-		// TODO Auto-generated method stub
+	public void viewAllUsers(Student student) {
+	
+		Student student1 = studentrepo.findAll(student1);
 		
 	}
 
+
 	@Override
-	public void getUserById() {
-		// TODO Auto-generated method stub
+	public void getUserByName(Student studentName) {
+		
+	Student student = studentrepo.findbyname(studentName);
 		
 	}
 
-	@Override
-	public void getUserByName() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	
 	
